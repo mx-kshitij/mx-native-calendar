@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget
+    id="mendix.mxnativecalendar.MxNativeCalendar"
+    pluginWidget="true"
+    needsEntityContext="true"
+    offlineCapable="true"
+    supportedPlatform="Native"
+    xmlns="http://www.mendix.com/widget/1.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd"
+>
+    <name>Mx Native Calendar</name>
+    <description>My widget description</description>
+    <icon />
+    <properties>
+        <propertyGroup caption="General">
+            <property key="selectedDate" type="attribute">
+                <caption>Selected date</caption>
+                <description />
+                <attributeTypes>
+                    <attributeType name="DateTime" />
+                </attributeTypes>
+            </property>
+            <property key="selectedDateColor" type="textTemplate">
+                <caption>Color</caption>
+                <description>Color for selected date. Default is blue.</description>
+            </property>
+            <property key="onDateChange" type="action">
+                <caption>On change</caption>
+                <description />
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Events">
+            <property key="events" type="datasource" isList="true" required="false">
+                <caption>Events</caption>
+                <description />
+            </property>
+            <property key="eventDate" type="attribute" dataSource="events" required="false">
+                <caption>Event date</caption>
+                <description />
+                <attributeTypes>
+                    <attributeType name="DateTime" />
+                </attributeTypes>
+            </property>
+            <property key="eventDateColor" type="textTemplate" dataSource="events" required="false">
+                <caption>Event color</caption>
+                <description>Color for event</description>
+            </property>
+            <property key="maxEventsDots" type="integer" defaultValue="5">
+                <caption>Maximum dots</caption>
+                <description>Maximum event dots to show under the date</description>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
