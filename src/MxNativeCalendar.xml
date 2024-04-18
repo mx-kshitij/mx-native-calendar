@@ -10,11 +10,11 @@
     xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd"
 >
     <name>Mx Native Calendar</name>
-    <description>My widget description</description>
+    <description>Calendar and Agenda widget</description>
     <icon />
     <properties>
         <propertyGroup caption="General">
-            <property key="selectedDate" type="attribute">
+            <property key="selectedDate" type="attribute" onChange="onDateChange">
                 <caption>Selected date</caption>
                 <description />
                 <attributeTypes>
@@ -23,11 +23,40 @@
             </property>
             <property key="selectedDateColor" type="textTemplate">
                 <caption>Color</caption>
-                <description>Color for selected date. Default is blue.</description>
+                <description>Color for selected date. Default is blue (#146ef6).</description>
+            </property>
+            <property key="selectedDateTextColor" type="textTemplate">
+                <caption>Text color</caption>
+                <description>Color for text of the selected date. Default is white.</description>
             </property>
             <property key="onDateChange" type="action">
                 <caption>On change</caption>
                 <description />
+            </property>
+            <property key="minDate" type="attribute" required="false">
+                <caption>Minimum date</caption>
+                <description />
+                <attributeTypes>
+                    <attributeType name="DateTime" />
+                </attributeTypes>
+            </property>
+            <property key="maxDate" type="attribute" required="false">
+                <caption>Maximum date</caption>
+                <description />
+                <attributeTypes>
+                    <attributeType name="DateTime" />
+                </attributeTypes>
+            </property>
+            <property key="disabledDates" type="datasource" isList="true" required="false">
+                <caption>Disabled dates</caption>
+                <description />
+            </property>
+            <property key="disabledDateAttribute" type="attribute" dataSource="disabledDates" required="false">
+                <caption>Disabled date attribute</caption>
+                <description />
+                <attributeTypes>
+                    <attributeType name="DateTime" />
+                </attributeTypes>
             </property>
         </propertyGroup>
         <propertyGroup caption="Events">

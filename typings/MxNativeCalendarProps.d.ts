@@ -4,14 +4,18 @@
  * @author Mendix Widgets Framework Team
  */
 import { CSSProperties } from "react";
-import { ActionValue, DynamicValue, EditableValue, ListValue, ListAttributeValue, ListExpressionValue } from "mendix";
+import { DynamicValue, EditableValue, ListValue, ListAttributeValue, ListExpressionValue } from "mendix";
 
 export interface MxNativeCalendarProps<Style> {
     name: string;
     style: Style[];
     selectedDate: EditableValue<Date>;
     selectedDateColor: DynamicValue<string>;
-    onDateChange?: ActionValue;
+    selectedDateTextColor: DynamicValue<string>;
+    minDate?: EditableValue<Date>;
+    maxDate?: EditableValue<Date>;
+    disabledDates?: ListValue;
+    disabledDateAttribute?: ListAttributeValue<Date>;
     events?: ListValue;
     eventDate?: ListAttributeValue<Date>;
     eventDateColor?: ListExpressionValue<string>;
@@ -29,7 +33,12 @@ export interface MxNativeCalendarPreviewProps {
     readOnly: boolean;
     selectedDate: string;
     selectedDateColor: string;
+    selectedDateTextColor: string;
     onDateChange: {} | null;
+    minDate: string;
+    maxDate: string;
+    disabledDates: {} | { caption: string } | { type: string } | null;
+    disabledDateAttribute: string;
     events: {} | { caption: string } | { type: string } | null;
     eventDate: string;
     eventDateColor: string;

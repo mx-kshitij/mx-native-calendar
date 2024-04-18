@@ -10,7 +10,7 @@
   },
   "license": "Apache-2.0",
   "config": {
-    "projectPath": "C:/Apps/Native POCs-main"
+    "projectPath": "C:/Apps/Native Experiments-10-main"
   },
   "packagePath": "mendix",
   "scripts": {
@@ -24,11 +24,13 @@
   "devDependencies": {
     "@mendix/pluggable-widgets-tools": "^9.24.0",
     "@types/big.js": "^6.0.2",
+    "@types/react-native-vector-icons": "^6.4.18",
     "@types/xdate": "^0.8.33"
   },
   "dependencies": {
     "babel-preset-react-native": "^4.0.1",
-    "react-native-calendars": "^1.1300.0"
+    "react-native-calendars": "^1.1300.0",
+    "react-native-vector-icons": "^9.2.0"
   },
   "resolutions": {
     "react": "18.2.0",
